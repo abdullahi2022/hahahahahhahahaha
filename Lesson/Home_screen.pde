@@ -1,5 +1,6 @@
 int backgroundX, backgroundY, backgroundWidth, backgroundHeight;
 float quitX, quitY, quitWidth, quitHeight;
+float quitButtonImageRectX, quitButtonImageRectY, quitButtonImageRectWidth, quitButtonImageRectHeight;
 int tintDayMode=255, tintDayModeOpacity=50;
 int tintRed=64, tintGreen=64, tintBlue=40, tintNightModeOpacity=85; //BLUE should be Zero or as close to it
 //
@@ -18,9 +19,25 @@ void homeScreen() {
   //
   //rect( quitX, quitY, quitWidth, quitHeight );
   if ( mouseX>=quitX && mouseX<=quitX+quitWidth && mouseY>=quitY && mouseY<=quitY+quitHeight ) { //QuitButton Hoverover
+    fill(white);
+    noStroke();
+    rect( quitX, quitY, quitWidth, quitHeight );
+    strokeWeight(1); //Reset: 1 pixel
+    noFill();
+    quitButtonImage(); //Cookie, aspect ratio
+    /*
+    fill(white);
+     rect( quitX, quitY, quitWidth, quitHeight ); //testing only
+     noFill();
+     */
   } else {
+    fill(white);
+    noStroke();
+    rect( quitX, quitY, quitWidth, quitHeight );
+    strokeWeight(1); //Reset: 1 pixel
+    noFill();
+    quitButtonText();
   }
-  quitButtonText();
 }//End homeScreen
 //
 void backgroundWhiteScreen() {
@@ -28,7 +45,7 @@ void backgroundWhiteScreen() {
   noStroke();
   rect( backgroundX, backgroundY, backgroundWidth, backgroundHeight );
   strokeWeight(1); //Reset: 1 pixel
-  fill(white); //Reset: white
+  noFill();
 }//End backgroundWhiteScreen()
 //
 void backgroundImage() {
