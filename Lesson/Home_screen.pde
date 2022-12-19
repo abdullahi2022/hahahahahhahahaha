@@ -21,7 +21,10 @@ void homeScreen() {
   if ( mouseX>=quitX && mouseX<=quitX+quitWidth && mouseY>=quitY && mouseY<=quitY+quitHeight ) { //QuitButton Hoverover
     fill(white);
     noStroke();
-    rect( quitX, quitY, quitWidth, quitHeight );
+    float centerX=appWidth*1/2;
+    float quitX_whiteScreen = centerX - appWidth * 1/15;
+    float quitWidth_whiteScreen = appWidth * 1/8;
+    rect( quitX_whiteScreen, quitY, quitWidth_whiteScreen, quitHeight );
     strokeWeight(1); //Reset: 1 pixel
     noFill();
     quitButtonImage(); //Cookie, aspect ratio
@@ -33,7 +36,10 @@ void homeScreen() {
   } else {
     fill(white);
     noStroke();
-    rect( quitX, quitY, quitWidth, quitHeight );
+    float centerX=appWidth*1/2;
+    float quitX_whiteScreen = centerX - appWidth * 1/15;
+    float quitWidth_whiteScreen = appWidth * 1/8;
+    rect( quitX_whiteScreen, quitY, quitWidth_whiteScreen, quitHeight );
     strokeWeight(1); //Reset: 1 pixel
     noFill();
     quitButtonText();
