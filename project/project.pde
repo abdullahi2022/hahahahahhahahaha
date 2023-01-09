@@ -52,7 +52,7 @@ void draw() {
   fill(resetWhite);
   //
   startImage();
-  startImage= loadImage("../Images Used/495468.png"); //width 512 height 512
+  startImage= loadImage("../Images Used/start button.png"); //width 512 height 512
   image(startImage, startImageX, startImageY, startImageWidth, startImageHeight);
   //
   startText1();
